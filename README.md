@@ -10,7 +10,7 @@ Easily create, view, and manage your text notes in a clean and responsive interf
 - Responsive UI using Tailwind CSS
 - Rapid development with Vite + React
 - Deployed on GitHub Pages with proper routing configuration
-q
+
 ## Tech Stack
 
 - React 18
