@@ -3,10 +3,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeFromPastes } from '../redux/pasteSlice';
 import ClearPastesButton from './ClearPastesButton';
 import toast from 'react-hot-toast';
+import SharePopup from './SharePopup';
 
 const Paste = () => {
     const pastes=useSelector((state)=>state.paste.pastes);
     const [searchTerm,setSearchTerm]=useState('');
+    const [showSharePopup, setShowSharePopup] = useState(false);
+    const [shareLink, setShareLink] = useState('');
+
     const dispatch=useDispatch();
     const filteredData = pastes.filter(
         (paste)=> paste.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -45,7 +49,7 @@ const Paste = () => {
                                     <button onClick={() => {navigator.clipboard.writeText(paste?.content); toast.success("copied to clipboard")}}>
                                         Copy
                                     </button>
-                                    <button>
+                                    <button onClick={() => {setShareLink(`${window.location.origin}/pastes/${paste._id}`); setShowSharePopup(true);}}>
                                         Share
                                     </button>
                                 </div>
@@ -58,6 +62,10 @@ const Paste = () => {
                 )
             }
         </div>
+        {/* Place SharePopup here */}
+        {showSharePopup && (
+        <SharePopup shareLink={shareLink} onClose={() => setShowSharePopup(false)} />
+        )}
     </div>
   )
 }
