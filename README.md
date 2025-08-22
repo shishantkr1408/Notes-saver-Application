@@ -1,12 +1,67 @@
-# React + Vite
+# Notes Saver Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and efficient notes saver web application built with React, Vite, and Tailwind CSS.  
+Easily create, view, and manage your text notes in a clean and responsive interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create and save text notes
+- View saved notes with unique URLs
+- Responsive UI using Tailwind CSS
+- Rapid development with Vite + React
+- Deployed on GitHub Pages with proper routing configuration
+q
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 18
+- Vite (build tool)
+- React Router DOM (for routing)
+- Tailwind CSS (for styling)
+- GitHub Pages (deployment)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup & Installation
+
+1. Clone the repository  
+git clone https://github.com/shishantkr1408/Notes-saver-Application.git
+cd Notes-saver-Application
+
+text
+
+2. Install dependencies  
+npm install
+
+text
+
+3. Run development server  
+npm run dev
+
+text
+
+4. Build for production  
+npm run build
+
+text
+
+## Deployment
+
+The app is configured to be deployed on GitHub Pages under `/Notes-saver-Application/` base path.  
+Make sure to update the `base` path in `vite.config.js` and the `basename` in your router configuration before building.
+
+## Usage
+
+- Open the app in your browser.
+- Create notes on the home or "Paste" page.
+- View individual notes via unique URLs.
+
+## Contributing
+
+Contributions are welcome!  
+Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Made with ❤️ by Shishant Kumar
